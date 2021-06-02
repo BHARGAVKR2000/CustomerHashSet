@@ -1,5 +1,6 @@
 package com.collections;
 
+@SuppressWarnings("unused")
 public class Customer {
 
     String name;
@@ -34,8 +35,6 @@ public class Customer {
     public void setOrganisation(String organisation) {
         this.organisation = organisation;
     }
-
-
 
 
 }
