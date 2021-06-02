@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public void add(HashMap<Integer, Customer> map){
-        Scanner sc = new Scanner(System.in);
+    public void add(HashMap<Integer, Customer> map, Scanner sc){
         System.out.println("Enter name:");
         String name = sc.nextLine();
         System.out.println("Enter id:");
@@ -18,8 +17,7 @@ public class Main {
         map.put(id, customer);
     }
 
-    public void update(HashMap<Integer, Customer> map){
-        Scanner sc = new Scanner(System.in);
+    public void update(HashMap<Integer, Customer> map, Scanner sc){
         System.out.println("Enter id:");
         int id = sc.nextInt();
         sc.nextLine();
@@ -31,8 +29,7 @@ public class Main {
         map.replace(id,customer);
     }
 
-    public void delete(HashMap<Integer, Customer> map){
-        Scanner sc = new Scanner(System.in);
+    public void delete(HashMap<Integer, Customer> map, Scanner sc){
         System.out.println("Enter id to delete:");
         int id = sc.nextInt();
         map.remove(id);
@@ -47,6 +44,7 @@ public class Main {
     @SuppressWarnings("SpellCheckingInspection")
     public static void main(String[] args) {
         HashMap<Integer, Customer> map = new HashMap<>();
+        Scanner sc = new Scanner(System.in);
         Main main = new Main();
         Customer customer1 = new Customer("james", 1, "tcs");
         Customer customer2 = new Customer("sam", 2, "hcl");
@@ -54,7 +52,7 @@ public class Main {
         map.put(customer2.getId(),customer2);
         main.display(map);
 //        main.add(map);
-        main.update(map);
+        main.update(map,sc);
 //        main.delete(map);
 
 
@@ -66,5 +64,6 @@ public class Main {
 
 
         main.display(map);
+
     }
 }
