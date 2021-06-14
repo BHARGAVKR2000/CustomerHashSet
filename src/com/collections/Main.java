@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Enter id:");
         int id = sc.nextInt();
         sc.nextLine();
-        System.out.println("Enter name:");
+        System.out.println("Enter Customer name:");
         String name = sc.nextLine();
         System.out.println("Enter organization:");
         String organization = sc.nextLine();
